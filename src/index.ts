@@ -4,9 +4,10 @@ const dateFormat = require('dateformat');
 let newsapi = new NewsAPI(process.env.KEY);
 let now = new Date();
 let yesterday = new Date(now.getFullYear(), now.getMonth(), now.getDate() - 1);
+let query = '株式会社パソナ OR アデコ株式会社 OR WDBホールディングス株式会社 OR 日産 OR 日立';
 
 newsapi.v2.everything({
-    q: '人材派遣',
+    q: query,
     from: dateFormat(yesterday, 'yyyy-mm-dd'),
     sortBy: 'relevancy'
 }).then((response: any) => {
