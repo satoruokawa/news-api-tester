@@ -5,8 +5,7 @@ Sample project to check result of News API https://newsapi.org/
 
 ```bash
 npm install
-npx tsc
-node dist/index.js
+npx tsc && KEY=API_KEY node dist/index.js
 ```
 
 # setting up log
